@@ -40,25 +40,31 @@ int main() {
 //Max sort function
 void maxSort(vector<int>& list){
 
-    for(int i=list.size()-1;i > =0; i--){
 
-       int current_max = 0;
+    for(int i= list.size()-1; i >= 0; i--){
+        int current_max = 0;
 
-        for(int j=0;j<=i;j++){
+        for(int j = 0; j<=i;j++){
 
-             if (list.at(j) > list.at(current_max)){
+
+             if (list.at(j) > list.at(current_max) ){
+
                  current_max = j;
 
                  swap(list.at(current_max), list.at(i));
+
+
              }
 
+            swap(list.at(i), list.at(current_max));
+
         }
-        /*complete the code*/
+
     }
 }
 
 // swap function
-void swap(int& a, int&b){
+void swap(int& a, int& b){
 
     int temp = a;
 
